@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const token = localStorage.getItem('token');
-        const response = await axios.get('/api/users', {
-            headers: { Authorization: `Bearer ${token}` }
-        });
+        
+        const response = await axios.get('/api/users');
         const userList = JSON.stringify(response.data, null, 2);
 
         
